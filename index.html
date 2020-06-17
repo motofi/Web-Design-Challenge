@@ -8,11 +8,11 @@
     <meta charset="UTF 8">
     <title>Bootstrap Visualization Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Resources/style.css">
 </head>
 
 <body>
-
+    <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brad" href="#">Latitude</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,39 +26,64 @@
           Plots
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="visualizations/clouds.html">Latitude v Cloudiness</a>
+                        <a class="dropdown-item" href="visualizations/humidity.html">Latitude v Humidity</a>
+                        <a class="dropdown-item" href="visualizations/temp.html">Latitude v Temperature</a>
+                        <a class="dropdown-item" href="visualizations/wind.html">Latitude v Wind Speed</a>
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="data.html">Data</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
         </div>
     </nav>
     <!-- Look at assignment 11.3.7 for navbar reference -->
+    <!-- -------------END NAV BAR --------------------- -->
 
 
-    <h1>Summary: Latitude vs X</h1>
-    <a href="https://github.com/motofi/Web-Design-Challenge">Go to Google</a>
-    <img src="https://github.com/motofi/Web-Design-Challenge/blob/master/WebVisualizations/Resources/assets/images/Fig1.png?raw=true">
+    <!-- -------------BEGIN MAIN LANDING BLOCK --------------------- -->
 
-    <textarea name="LandingPageDescription" rows="20" cols="100">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities. <br> After assembling
-                the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as
-                part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</textarea>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Summary: Latitude vs X</h1>
+            <hr class="my-4">
+
+            <!-- TODO: IMAGE LINK --------------------- -->
+
+            <img src="https://github.com/motofi/Web-Design-Challenge/blob/master/WebVisualizations/Resources/assets/images/Fig1.png">
+            <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
+                <br>
+                <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
+                created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+            <hr class="my-4">
+
+        </div>
+    </div>
+    <!-- -------------END MAIN LANDING BLOCK --------------------- -->
+
+
+    <!-- -------------BEGIN VISUALIZATIONS LINKS BLOCK --------------------- -->
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Visualizations</h1>
+            <!-- TODO: IMAGE LINK --------------------- -->
+
+            <img src="https://github.com/motofi/Web-Design-Challenge/blob/master/WebVisualizations/Resources/assets/images/Fig1.png">
+            <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
+                <br>
+                <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
+                created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+            <hr class="my-4">
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
