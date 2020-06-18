@@ -6,9 +6,18 @@
 
 <head>
     <meta charset="UTF 8">
-    <title>Bootstrap Visualization Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Resources/style.css">
+    <title>Bootstrap Visualization Dashboard</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -20,7 +29,8 @@
       </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav navbar-right ml-auto">
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Plots
@@ -49,20 +59,18 @@
 
 
     <!-- -------------BEGIN MAIN LANDING BLOCK --------------------- -->
+    <!-- TODO: WRAP TEXT AROUND IMAGE  -->
 
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4">Summary: Latitude vs X</h1>
             <hr class="my-4">
-
-            <!-- TODO: IMAGE LINK --------------------- -->
-
-            <img src="https://github.com/motofi/Web-Design-Challenge/blob/master/WebVisualizations/Resources/assets/images/Fig1.png">
+            <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
+            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true" class="rounded float-left" alt="Example Image" id="expimg">
             <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
                 <br>
                 <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
                 created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-            <hr class="my-4">
 
         </div>
     </div>
@@ -73,22 +81,41 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Visualizations</h1>
-            <!-- TODO: IMAGE LINK --------------------- -->
+            <h3 class="display-4">Visualizations</h1>
+                <!-- TODO: IMAGE LINK --------------------- -->
+                <hr class="my-4">
 
-            <img src="https://github.com/motofi/Web-Design-Challenge/blob/master/WebVisualizations/Resources/assets/images/Fig1.png">
-            <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
-                <br>
-                <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
-                created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-            <hr class="my-4">
+                <div class="container">
+                    <!--Normally these medium columns go full wide on small screen sizes-->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box skyblue"><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="img-thumbnail"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box skyblue">
+                                <a href="visualizations/humidity.html">
+                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsHumidity.png?raw=true" class="img-thumbnail">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="box skyblue ">
+                                <a href="visualizations/temp.html">
+                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true " class="img-thumbnail ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="box skyblue "><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="img-thumbnail "></div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
 </body>
 
@@ -104,7 +131,7 @@ corresponding explanations. We'll also have a landing page, a page where we can 
 comparison of all of the plots, and another page where we can view the data used to build them.
 
 Website Requirements
-For reference, see the "Screenshots" section below.
+For reference, see the "Screenshots " section below.
 The website must consist of 7 pages total, including:
 
 A landing page containing:
@@ -120,7 +147,7 @@ The plot/visualization itself for the selected comparison.
 A paragraph describing the plot and its significance.
 
 
-A "Comparisons" page that:
+A "Comparisons " page that:
 
 Contains all of the visualizations on the same page so we can easily visually compare them.
 Uses a bootstrap grid for the visualizations.
@@ -131,7 +158,7 @@ extra-small and small screens.
 
 
 
-A "Data" page that:
+A "Data " page that:
 
 Displays a responsive table containing the data used in the visualizations.
 
@@ -149,12 +176,12 @@ to_html that allows you to generate a HTML table from a pandas dataframe. See th
 The website must, at the top of every page, have a navigation menu that:
 
 Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
-Contains a dropdown on the right of the navbar named "Plots" which provides links
+Contains a dropdown on the right of the navbar named "Plots " which provides links
 to each individual visualization page.
-Provides two more links on the right: "Comparisons" which links to the comparisons page,
-and "Data" which links to the data page.
+Provides two more links on the right: "Comparisons " which links to the comparisons page,
+and "Data " which links to the data page.
 Is responsive (using media queries). The nav must have similar behavior as the screenshots
-"Navigation Menu" section (notice the background color change).
+"Navigation Menu " section (notice the background color change).
 
 Finally, the website must be deployed to GitHub pages.
 When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the GitHub repository.

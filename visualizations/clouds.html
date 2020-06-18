@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<!-- create a root component that will contain all of the doc -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Resources/style.css">
+    <title>Bootstrap Visualization Dashboard</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brad" href="#">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="visualizations/clouds.html">Latitude v Cloudiness</a>
+                        <a class="dropdown-item" href="visualizations/humidity.html">Latitude v Humidity</a>
+                        <a class="dropdown-item" href="visualizations/temp.html">Latitude v Temperature</a>
+                        <a class="dropdown-item" href="visualizations/wind.html">Latitude v Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Look at assignment 11.3.7 for navbar reference -->
+    <!-- -------------END NAV BAR --------------------- -->
+
+
+    <!-- -------------BEGIN MAIN LANDING BLOCK --------------------- -->
+    <!-- TODO: WRAP TEXT AROUND IMAGE  -->
+
+    <!-- <div class="container">
+        <section class="row">
+            <div class="col-xs-9 col-md-7">.col-xs-9 .col-md-7
+                <div class="col-xs-3 col-md-5">.col-xs-3 .col-md-5
+                <h1 class="display-4">Cloudiness</h1>
+                <hr class="my-4">
+                https://getbootstrap.com/docs/4.1/content/images/
+                TODO: IMAGE IS GOING BELOW CONTAINER
+                <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="rounded float-left" alt="Example Image" id="expimg">
+                <p class="lead">Scatter plot employed to illustrate the relationship between latitude location and the cloudiness for a day in the month of May. For this day in May, there does not appear to be a clear influence on the latitude location of the city data
+                    set and severity of cloud cover.</p>
+            </div>
+        </section>
+    </div> -->
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1 class="display-4">Cloudiness</h1>
+            <hr class="my-4"> https://getbootstrap.com/docs/4.1/content/images/
+            <!-- TODO: IMAGE IS GOING BELOW CONTAINER-->
+            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="rounded float-left" alt="Example Image" id="expimg">
+        </div>
+        <div class="grid-item">
+            <p class="lead">Scatter plot employed to illustrate the relationship between latitude location and the cloudiness for a day in the month of May. For this day in May, there does not appear to be a clear influence on the latitude location of the city data set
+                and severity of cloud cover.</p>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+
+
+    </div>
+
+    <!-- -------------END MAIN LANDING BLOCK --------------------- -->
+
+
+    <!-- -------------BEGIN VISUALIZATIONS LINKS BLOCK --------------------- -->
+
+    <div class="container">
+        <div class="jumbotron">
+            <h3 class="display-4">Visualizations</h1>
+                <!-- TODO: IMAGE LINK --------------------- -->
+                <hr class="my-4">
+
+                <div class="container">
+                    <!--Normally these medium columns go full wide on small screen sizes-->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box skyblue"><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="img-thumbnail"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="box skyblue">
+                                <a href="visualizations/humidity.html">
+                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsHumidity.png?raw=true" class="img-thumbnail">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="box skyblue ">
+                                <a href="visualizations/temp.html">
+                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true " class="img-thumbnail ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="box skyblue "><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="img-thumbnail "></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
+
+
+<!-- Latitude - Latitude Analysis Dashboard with Attitude
+For this homework we'll be creating a visualization dashboard website using visualizations
+we've created in a past assignment. Specifically, we'll be plotting weather data.
+In building this dashboard, we'll create individual pages for each plot and a means by
+which we can navigate between them. These pages will contain the visualizations and their
+corresponding explanations. We'll also have a landing page, a page where we can see a
+comparison of all of the plots, and another page where we can view the data used to build them.
+
+Website Requirements
+For reference, see the "Screenshots " section below.
+The website must consist of 7 pages total, including:
+
+A landing page containing:
+
+An explanation of the project.
+Links to each visualizations page.
+
+
+Four visualization pages, each with:
+
+A descriptive title and heading tag.
+The plot/visualization itself for the selected comparison.
+A paragraph describing the plot and its significance.
+
+
+A "Comparisons " page that:
+
+Contains all of the visualizations on the same page so we can easily visually compare them.
+Uses a bootstrap grid for the visualizations.
+
+The grid must be two visualizations across on screens medium and larger, and 1 across on
+extra-small and small screens.
+
+
+
+
+A "Data " page that:
+
+Displays a responsive table containing the data used in the visualizations.
+
+The table must be a bootstrap table component. Hint
+
+The data must come from exporting the .csv file as HTML, or converting it to HTML.
+Try using a tool you already know, pandas. Pandas has a nifty method approprately called
+to_html that allows you to generate a HTML table from a pandas dataframe. See the documentation here
+
+
+
+
+
+
+The website must, at the top of every page, have a navigation menu that:
+
+Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+Contains a dropdown on the right of the navbar named "Plots " which provides links
+to each individual visualization page.
+Provides two more links on the right: "Comparisons " which links to the comparisons page,
+and "Data " which links to the data page.
+Is responsive (using media queries). The nav must have similar behavior as the screenshots
+"Navigation Menu " section (notice the background color change).
+
+Finally, the website must be deployed to GitHub pages.
+When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the GitHub repository.
+
+Considerations
+
+You may use the weather data or choose another dataset. Alternatively, you may use the
+included cities dataset and pull the images from the assets folder.
+You must use bootstrap. This includes using the bootstrap navbar component for the header on
+every page, the bootstrap table component for the data page, and the bootstrap grid for
+responsiveness on the comparison page.
+You must deploy your website to GitHub pages, with the website working on a live, publicly
+accessible URL as a result.
+Be sure to use a CSS media query for the navigation menu.
+Be sure your website works at all window widths/sizes.
+Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
+
+ -->

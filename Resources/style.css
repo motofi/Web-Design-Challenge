@@ -76,6 +76,12 @@ h3 {
     visibility: hidden;
 }
 
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
 
 /* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
 
