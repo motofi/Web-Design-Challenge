@@ -16,6 +16,9 @@ h3 {
 }
 
 
+/* ************** NAVBAR ************** */
+
+
 /* Giving our navbar some padding and a background color */
 
 .navbar {
@@ -26,7 +29,7 @@ h3 {
 
 /* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
 
-.navbar li {
+.navbar-li {
     display: inline-block;
     padding: 20px;
     margin-right: 10px;
@@ -39,7 +42,7 @@ h3 {
 
 /* Getting rid of the default link styles here */
 
-.navbar li a {
+.navbar-li-a {
     color: #000;
     text-decoration: none;
 }
@@ -82,6 +85,12 @@ h3 {
     grid-row-gap: 50px;
 }
 
+#badge {
+    font-size: large;
+    font-weight: bold;
+    margin-left: auto;
+}
+
 
 /* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
 
@@ -99,4 +108,62 @@ h3 {
     #nav-select {
         visibility: visible;
     }
+}
+
+
+/* ************** MAIN CONTENT **************  */
+
+
+/* primarily colors and positioning */
+
+.main-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: steelblue;
+}
+
+.main-image-featured {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-image-grid {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-image-wrap {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-content {}
+
+.main-sub-text {}
+
+.main-p {}
+
+
+/* ************** VISUALIZATION GRID ************** */
+
+.vis-nav-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: steelblue;
+}
+
+.vis-nav-image {
+    /* positioning */
+    /* padding */
+    max-width: 100%;
+    height: auto;
 }
