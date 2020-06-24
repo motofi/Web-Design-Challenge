@@ -21,10 +21,20 @@
 </head>
 
 <body>
+
+    <!-- data-target="#navbarSupportedContent -->
+    <!-- aria-controls="navbarSupportedContent" -->
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar-right ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+                </a> -->
     <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" id="badge" href="#">Latitude</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -33,16 +43,16 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Plots
-        </a>
-                    <div class="dropdown-menu navbar-li navbar-li-a" aria-labelledby="navbarDropdown">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="visualizations/clouds.html">Latitude v Cloudiness</a>
                         <a class="dropdown-item" href="visualizations/humidity.html">Latitude v Humidity</a>
                         <a class="dropdown-item" href="visualizations/temp.html">Latitude v Temperature</a>
                         <a class="dropdown-item" href="visualizations/wind.html">Latitude v Wind Speed</a>
                     </div>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -62,8 +72,10 @@
     <!-- both as one section, each block as an article -->
     <div class="container main-container">
         <section class="row">
-            <div class="col-md-8 main-content">
-                <article class=>
+            <!-- -------------BEGIN LANDING-FEATURED CONTAINER --------------------- -->
+
+            <div class="col-md-8 main-content" id="main-column">
+                <article>
                     <h1 class="display-4 main-header">Summary: Latitude vs X</h1>
                     <hr class="my-4">
                     <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
@@ -73,17 +85,27 @@
                         <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data
                         and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </article>
-            </div>
-            <div class="col-md-4">
-                <article>
-                    <h3 class="display-4">Visualizations</h1>
-                        <hr class="my-4">
+                <!-- <div class="col-md-1 container-break">
+                </div> -->
+                <div>
 
-                        <div class="container">
+                </div>
+                <!-- -------------BEGIN LANDING-VISUALIZATIONS CONTAINER --------------------- -->
+
+                <div class="col-md-4 vis-nav-container" id="vis-column">
+                    <article>
+                        <h2 class="vis-nav-header">Visualizations</h1>
+                            <hr class="my-4">
+
+
                             <!--Normally these medium columns go full wide on small screen sizes-->
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="box skyblue"><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="vis-nav-image"></div>
+                                    <div class="box skyblue">
+                                        <a href="visualizations/clouds.html">
+                                            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="vis-nav-image">
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="box skyblue">
@@ -102,14 +124,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 ">
-                                    <div class="box skyblue "><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="vis-nav-image "></div>
+                                    <div class="box skyblue ">
+                                        <a href=="visualizations/wind.html">
+                                            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="vis-nav-image ">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+
+                </div>
+                </article>
             </div>
-            </article>
-    </div>
-    </section>
+        </section>
     </div>
     <!-- -------------END LANDING BLOCK --------------------- -->
 
