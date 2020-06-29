@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="Resources/style.css">
+    <link rel="stylesheet" href="../Resources/style.css">
     <title>Bootstrap Visualization Dashboard</title>
     <style>
         #expimg {
@@ -21,10 +21,20 @@
 </head>
 
 <body>
+
+    <!-- data-target="#navbarSupportedContent -->
+    <!-- aria-controls="navbarSupportedContent" -->
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar-right ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+                </a> -->
     <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brad" href="#">Latitude</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" id="badge" href="#">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -33,20 +43,20 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Plots
-        </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="visualizations/clouds.html">Latitude v Cloudiness</a>
-                        <a class="dropdown-item" href="visualizations/humidity.html">Latitude v Humidity</a>
-                        <a class="dropdown-item" href="visualizations/temp.html">Latitude v Temperature</a>
-                        <a class="dropdown-item" href="visualizations/wind.html">Latitude v Wind Speed</a>
+                    Plots
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="clouds.html">Latitude v Cloudiness</a>
+                        <a class="dropdown-item" href="humidity.html">Latitude v Humidity</a>
+                        <a class="dropdown-item" href="temp.html">Latitude v Temperature</a>
+                        <a class="dropdown-item" href="wind.html">Latitude v Wind Speed</a>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../comparisons.html">Comparison <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="data.html">Data</a>
+                    <a class="nav-link" href="../data.html">Data</a>
                 </li>
 
 
@@ -54,7 +64,6 @@
 
         </div>
     </nav>
-    <!-- Look at assignment 11.3.7 for navbar reference -->
     <!-- -------------END NAV BAR --------------------- -->
 
 
@@ -63,15 +72,16 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Summary: Latitude vs X</h1>
+            <h1 class="display-4">Summary: Latitude vs Humidity</h1>
             <hr class="my-4">
             <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
             <!-- TODO: PADDING IS NOT RENDERING SPACE BETWEEN TEXT AND IMAGE -->
-            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true" class="rounded float-left" alt="Example Image" id="expimg">
+            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true" class="rounded main-image-featured" alt="Example Image" id="expimg">
             <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
                 <br>
-                <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
-                created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                <br>A scatter plot is employed to illustrate the relationship between latitude location and the current wind speed
+for a day in the month of May. For this day in May, while there does appear to be higher winds for a small
+selection of cities between -30° and -40°, it does not appear to be a significant number. </p>
 
         </div>
     </div>

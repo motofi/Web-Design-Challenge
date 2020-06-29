@@ -21,10 +21,20 @@
 </head>
 
 <body>
+
+    <!-- data-target="#navbarSupportedContent -->
+    <!-- aria-controls="navbarSupportedContent" -->
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar-right ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+                </a> -->
     <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brad" href="#">Latitude</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" id="badge" href="#">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -33,16 +43,16 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Plots
-        </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    Plots
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="visualizations/clouds.html">Latitude v Cloudiness</a>
                         <a class="dropdown-item" href="visualizations/humidity.html">Latitude v Humidity</a>
                         <a class="dropdown-item" href="visualizations/temp.html">Latitude v Temperature</a>
                         <a class="dropdown-item" href="visualizations/wind.html">Latitude v Wind Speed</a>
                     </div>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="comparisons.html">Comparison <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -54,69 +64,76 @@
 
         </div>
     </nav>
-    <!-- Look at assignment 11.3.7 for navbar reference -->
     <!-- -------------END NAV BAR --------------------- -->
 
 
-    <!-- -------------BEGIN MAIN LANDING BLOCK --------------------- -->
-    <!-- TODO: WRAP TEXT AROUND IMAGE  -->
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Summary: Latitude vs X</h1>
-            <hr class="my-4">
-            <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
-            <!-- TODO: PADDING IS NOT RENDERING SPACE BETWEEN TEXT AND IMAGE -->
-            <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true" class="rounded float-left" alt="Example Image" id="expimg">
-            <p class="lead">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a data set on over 500 cities.
-                <br>
-                <br> After assembling the data set, we used Matlatlib to plot various aspects of the weather versus latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
-                created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+    <!-- ** NEW ** MAIN LANDING BLOCK -->
 
-        </div>
+    <div class="container jumbotron">
+        <article class="row comp-container">
+            <!-- title -->
+            <div class="col-sm-12">
+                <h1 class="display-4 main-header">Comparison: Latitude vs X</h1>
+                <hr class="my-4">
+            </div>
+
+            <!-- <div class="row"> -->
+
+            <!-- temp image -->
+            <div class="col-md-6">
+                <h3 class="comp-h3">vs. Temperature</h3>
+                <a href="visualizations/temp.html">
+                    <img class="img-responsive comp-image" src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true " class="vis-nav-image ">
+                </a>
+                <!-- <hr class="my-4"> -->
+            </div>
+
+            <!-- humidity image -->
+
+            <div class="col-md-6">
+                <h3 class="comp-h3">vs. Humidity</h3>
+                <a href="visualizations/humidity.html">
+                    <img class="img-responsive comp-image" src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsHumidity.png?raw=true" class="vis-nav-image">
+                </a>
+                <!-- <hr class="my-4"> -->
+            </div>
+            <!-- </div>
+            <div class="row"></div> -->
+            <!-- cloud image -->
+            <div class="col-md-6">
+                <h3 class="comp-h3">vs. Cloudiness</h3>
+                <a href="visualizations/clouds.html">
+                    <img class="img-responsive comp-image" src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="vis-nav-image">
+                </a>
+                <!-- <hr class="hr-comp"> -->
+            </div>
+
+            <!-- wind image -->
+            <div class="col-md-6">
+                <h3 class="comp-h3">vs. Wind Speed</h3>
+                <a href="visualizations/wind.html">
+                    <img class="img-responsive comp-image" src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="vis-nav-image ">
+                </a>
+                <!-- <hr class="hr-comp"> -->
+                <!-- </div> -->
+            </div>
+
+        </article>
     </div>
+
+
+
     <!-- -------------END MAIN LANDING BLOCK --------------------- -->
 
 
-    <!-- -------------BEGIN VISUALIZATIONS LINKS BLOCK --------------------- -->
-
-    <div class="container">
-        <div class="jumbotron">
-            <h3 class="display-4">Visualizations</h1>
-                <!-- TODO: IMAGE LINK --------------------- -->
-                <hr class="my-4">
-
-                <div class="container">
-                    <!--Normally these medium columns go full wide on small screen sizes-->
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="box skyblue"><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsCloud.png?raw=true" class="img-thumbnail"></div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="box skyblue">
-                                <a href="visualizations/humidity.html">
-                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsHumidity.png?raw=true" class="img-thumbnail">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 ">
-                            <div class="box skyblue ">
-                                <a href="visualizations/temp.html">
-                                    <img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsTemp.png?raw=true " class="img-thumbnail ">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 ">
-                            <div class="box skyblue "><img src="https://github.com/motofi/python-api-challenge/blob/master/WeatherPy/output/CityLatVsWind.png?raw=true " class="img-thumbnail "></div>
-                        </div>
-                    </div>
-                </div>
-        </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 
 </body>
 

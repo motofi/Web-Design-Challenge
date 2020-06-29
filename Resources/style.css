@@ -16,38 +16,6 @@ h3 {
 }
 
 
-/* ************** NAVBAR ************** */
-
-
-/* Giving our navbar some padding and a background color */
-
-.navbar {
-    padding: 10px;
-    background: #5191fd;
-}
-
-
-/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
-
-.navbar-li {
-    display: inline-block;
-    padding: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    background: #fff;
-    border-radius: 3px;
-}
-
-
-/* Getting rid of the default link styles here */
-
-.navbar-li-a {
-    color: #000;
-    text-decoration: none;
-}
-
-
 /* Styling the header, giving it a height, a background color, and some top padding */
 
 .header {
@@ -77,6 +45,7 @@ h3 {
 
 #nav-select {
     visibility: hidden;
+    /* display: none; */
 }
 
 .grid-container {
@@ -85,11 +54,39 @@ h3 {
     grid-row-gap: 50px;
 }
 
+
+/* ************** NAVBAR ************** */
+
+
+/* Giving our navbar some padding and a background color */
+
+.navbar {
+    padding: 10px;
+    background: #5191fd;
+}
+
+
+/* Getting rid of the default link styles here */
+
+.navbar-li-a {
+    color: #000;
+    text-decoration: none;
+}
+
 #badge {
-    font-size: large;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    margin-left: auto;
-    background-color: lightsteelblue;
+    color: white;
+    margin-left: 5%;
+    background-color: steelblue;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
 }
 
 
@@ -136,6 +133,7 @@ h3 {
 .main-image-featured {
     max-width: 100%;
     height: auto;
+    float: center;
 }
 
 .main-image-grid {
@@ -146,32 +144,51 @@ h3 {
 .main-image-wrap {
     max-width: 100%;
     height: auto;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
+    float: left;
 }
 
 .main-content {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
+    padding: 20px;
+    /* margin-right: 1%; */
 }
 
 .main-sub-text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: dimgrey;
 }
 
 .main-p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
+    display: block;
+    line-height: 30px;
+    color: dimgrey;
+}
+
+#main-column {
+    width: 800px;
 }
 
 
 /* ************** VISUALIZATION GRID ************** */
 
+#vis-column {
+    width: 800px;
+    padding-left: 25px;
+}
+
 .vis-nav-container {
     background-color: white;
+    padding: 20px;
+    /* margin-left: 1%; */
+    /* margin-right: 5%; */
 }
 
 .vis-nav-header {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: steelblue;
 }
 
@@ -188,6 +205,41 @@ h3 {
     margin-bottom: 5%;
     margin-right: 5%;
     margin-left: 5%;
+}
+
+.container-break {
+    color: black;
+}
+
+
+/* ************** COMPARISON GRID ************** */
+
+.comp-container {
+    padding: 20px;
+    display: flex;
+}
+
+.comp-h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: steelblue;
+    font-size: large;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.comp-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    /* display: inline-flex; */
+    flex: 50%;
+    padding: 10px;
+    /* float: center; */
+}
+
+.hr-comp {
+    size: 0px;
 }
 
 
